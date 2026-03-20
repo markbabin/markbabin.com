@@ -35,7 +35,7 @@ export default function Home() {
           className="text-4xl font-bold transition-colors hover:text-[#e8855c]"
           style={{ fontFamily: "var(--font-source-code-pro)" }}
         >
-          dev
+          _dev
         </SparkLink>
       </div>
     </div>
