@@ -21,7 +21,7 @@ Punky, synthy, and extremely seasoned take on weirdo nerd rock. Cools ideas, roi
 
 ## Fuzz: Fuzz (2013)
 
-Guilty pleasure for cool kids, this alt supergroup sounds as dirty as they look.
+Guilty pleasure for cool kids, this alt supergroup sounds as dirty as they look. The whole record sounds incredibly full for a three-piece band, and Ty's combination of singing and drumming is pretty impressive. For me, the opening track Earthen's Gate and 3rd track What's In My Head are the stars of the show, which does not imply the whole project isn't solid as a fucking pyramid.
 
 <br/><br/><br/>
 
