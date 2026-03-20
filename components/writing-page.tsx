@@ -21,8 +21,8 @@ export function WritingPage({ posts }: { posts: Post[] }) {
             onClick={() => setActive(topic)}
             className={`text-sm px-3 py-1 rounded-full transition-colors ${
               active === topic
-                ? "bg-[#8ACE00] text-black font-medium"
-                : "text-zinc-500 dark:text-zinc-400 hover:text-[#8ACE00] dark:hover:text-[#8ACE00]"
+                ? "bg-[#e8855c] text-black font-medium"
+                : "text-zinc-500 dark:text-zinc-400 hover:text-[#e8855c] dark:hover:text-[#e8855c]"
             }`}
           >
             {topic}

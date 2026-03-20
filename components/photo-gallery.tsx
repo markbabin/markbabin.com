@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const GREEN = "#8ACE00";
+const GREEN = "#e8855c";
 
 export function PhotoGallery({ photos }: { photos: string[] }) {
   const [selected, setSelected] = useState<string | null>(null);

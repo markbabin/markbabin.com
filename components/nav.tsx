@@ -25,8 +25,8 @@ export function Nav() {
               href={href}
               className={`text-sm transition-colors ${
                 active
-                  ? "text-[#8ACE00] font-medium"
-                  : "text-zinc-500 hover:text-[#8ACE00] dark:text-zinc-400 dark:hover:text-[#8ACE00]"
+                  ? "text-[#e8855c] font-medium"
+                  : "text-zinc-500 hover:text-[#e8855c] dark:text-zinc-400 dark:hover:text-[#e8855c]"
               }`}
             >
               {label}
@@ -37,7 +37,7 @@ export function Nav() {
           href="https://github.com/markbabin"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-500 hover:text-[#8ACE00] dark:text-zinc-400 dark:hover:text-[#8ACE00] transition-colors"
+          className="text-zinc-500 hover:text-[#e8855c] dark:text-zinc-400 dark:hover:text-[#e8855c] transition-colors"
           aria-label="GitHub"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="size-[1.25em]">
@@ -46,7 +46,7 @@ export function Nav() {
         </a>
         <a
           href="mailto:mark@markbabin.com"
-          className="text-zinc-500 hover:text-[#8ACE00] dark:text-zinc-400 dark:hover:text-[#8ACE00] transition-colors"
+          className="text-zinc-500 hover:text-[#e8855c] dark:text-zinc-400 dark:hover:text-[#e8855c] transition-colors"
           aria-label="Email"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-[1.25em]">

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const GREEN = "#8ACE00";
+const GREEN = "#e8855c";
 
 export function FlickerHeading({
   text,

@@ -23,7 +23,7 @@ export function PostList({ posts, basePath, showRating }: PostListProps) {
             className="group flex items-baseline justify-between gap-4"
           >
             <span
-              className="text-zinc-900 dark:text-zinc-100 group-hover:text-[#8ACE00] dark:group-hover:text-[#8ACE00] transition-colors font-bold uppercase tracking-wider"
+              className="text-zinc-900 dark:text-zinc-100 group-hover:text-[#e8855c] dark:group-hover:text-[#e8855c] transition-colors font-bold uppercase tracking-wider"
               style={{ fontFamily: "var(--font-oswald)" }}
             >
               {post.title}
