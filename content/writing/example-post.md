@@ -2,7 +2,7 @@
 title: "Building a Personal Website"
 date: "2026-03-19"
 description: "Some thoughts on building a minimalistic personal website with Next.js and Tailwind CSS."
-topic: "Everything else"
+topic: "Dev"
 ---
 
 There's something satisfying about building your own corner of the internet. No templates, no page builders — just you and a blank canvas.
@@ -22,8 +22,6 @@ const posts = fs.readdirSync(dir)
   });
 ```
 
-## Keeping it simple
 
 The goal was minimalism. No analytics, no comments, no JavaScript frameworks fighting for attention. Just words on a page with a clean design that gets out of the way.
-
 Sometimes the best feature is the one you didn't add.

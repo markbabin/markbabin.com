@@ -17,6 +17,11 @@
   --foreground: #fafafa;
 }
 
+.black {
+  --background: #000000;
+  --foreground: #fafafa;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -34,7 +39,8 @@ body {
   line-height: 1.75;
 }
 
-.dark .prose {
+.dark .prose,
+.black .prose {
   --tw-prose-body: #a1a1aa;
   --tw-prose-headings: #fafafa;
   --tw-prose-links: #fafafa;
@@ -137,7 +143,9 @@ body {
 }
 
 .dark .shiki,
-.dark .shiki span {
+.dark .shiki span,
+.black .shiki,
+.black .shiki span {
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
 }

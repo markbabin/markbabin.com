@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getWritingPosts } from "@/lib/content";
 import { WritingPage } from "@/components/writing-page";
 import type { Metadata } from "next";
@@ -9,5 +10,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const posts = getWritingPosts();
-  return <WritingPage posts={posts} />;
+  return (
+    <Suspense>
+      <WritingPage posts={posts} />
+    </Suspense>
+  );
 }

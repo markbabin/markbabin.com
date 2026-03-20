@@ -1,19 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { PostList } from "./post-list";
 import type { Post } from "@/lib/content";
 
-const TOPICS = ["Music", "Everything else"] as const;
+const TOPICS = ["Music", "Dev", "Everything else"] as const;
 
 export function WritingPage({ posts }: { posts: Post[] }) {
-  const [active, setActive] = useState<string>(TOPICS[0]);
+  const searchParams = useSearchParams();
+  const topicParam = searchParams.get("topic");
+  const [active, setActive] = useState<string>(
+    TOPICS.includes(topicParam as any) ? topicParam! : TOPICS[0]
+  );
+
+  useEffect(() => {
+    if (topicParam && TOPICS.includes(topicParam as any)) {
+      setActive(topicParam);
+    }
+  }, [topicParam]);
 
   const filtered = posts.filter((p) => p.topic === active);
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-semibold tracking-tight">Writing</h1>
+      <h1 className="text-3xl italic font-bold tracking-tight" style={{ fontFamily: "var(--font-playfair)" }}>Rants</h1>
       <div className="flex items-center gap-4">
         {TOPICS.map((topic) => (
           <button

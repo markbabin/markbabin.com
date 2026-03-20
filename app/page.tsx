@@ -31,6 +31,13 @@ export default function Home() {
         >
           Music
         </a>
+        <Link
+          href="/writing?topic=Dev"
+          className="text-4xl font-bold transition-colors hover:text-[#e8855c]"
+          style={{ fontFamily: "var(--font-source-code-pro)" }}
+        >
+          dev
+        </Link>
       </div>
     </div>
   );

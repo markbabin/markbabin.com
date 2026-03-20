@@ -1,5 +1,5 @@
 ---
-title: "FOUR ALBUMS I ENOJYED IN fEB"
+title: "FOUR ALBUMS I ENJOYED IN fEB"
 date: "2026-03-10"
 description: "A look back at the records that defined the past twelve months."
 topic: "Music"
