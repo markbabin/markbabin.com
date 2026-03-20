@@ -1,7 +1,21 @@
+import fs from "fs";
+import path from "path";
 import { NeonTitle } from "@/components/neon-title";
 import { SparkLink } from "@/components/spark-link";
+import { Screensaver } from "@/components/screensaver";
+
+function getPhotos(): string[] {
+  const dir = path.join(process.cwd(), "public", "photos");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(f))
+    .map((f) => `/photos/${f}`);
+}
 
 export default function Home() {
+  const photos = getPhotos();
+
   return (
     <div>
       <div className="fixed bottom-8 right-8">
@@ -38,6 +52,7 @@ export default function Home() {
           _dev
         </SparkLink>
       </div>
+      <Screensaver photos={photos} />
     </div>
   );
 }
