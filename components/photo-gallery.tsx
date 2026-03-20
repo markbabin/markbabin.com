@@ -114,7 +114,7 @@ export function PhotoGallery({ photos }: { photos: string[] }) {
         className="grid gap-2"
         style={{
           gridTemplateColumns: "repeat(4, 1fr)",
-          gridAutoRows: "200px",
+          gridAutoRows: "500px",
           gridAutoFlow: "dense",
         }}
       >

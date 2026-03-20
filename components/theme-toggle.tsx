@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 type Theme = "dark" | "black";
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("black");
 
   useEffect(() => {
     const saved = localStorage.getItem("theme") as Theme | null;
-    if (saved === "black") {
-      setTheme("black");
-      document.documentElement.classList.remove("dark");
-      document.documentElement.classList.add("black");
+    if (saved === "dark") {
+      setTheme("dark");
+      document.documentElement.classList.remove("black");
+      document.documentElement.classList.add("dark");
     }
   }, []);
 

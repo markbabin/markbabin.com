@@ -54,6 +54,21 @@ export function Nav() {
             <path d="M22 4L12 13 2 4" />
           </svg>
         </a>
+        <a
+          href="https://www.instagram.com/belopidiko/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-zinc-400 hover:text-[#e8855c] transition-colors"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-[1.25em]">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="5" />
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+          </svg>
+        </a>
+      </div>
+      <div className="fixed top-4 right-4">
         <ThemeToggle />
       </div>
     </nav>

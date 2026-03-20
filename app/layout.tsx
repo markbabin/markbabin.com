@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${jetbrainsMono.variable} ${playfair.variable} ${oswald.variable} ${bitcountInk.variable} ${sourceCodePro.variable} h-full`}
+      className={`black ${jetbrainsMono.variable} ${playfair.variable} ${oswald.variable} ${bitcountInk.variable} ${sourceCodePro.variable} h-full`}
     >
       <body className="min-h-full flex flex-col font-sans antialiased">
         <div className="mx-auto w-full max-w-2xl px-6 flex flex-col min-h-full flex-1">

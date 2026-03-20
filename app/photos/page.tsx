@@ -27,7 +27,7 @@ export default function PhotosPage() {
       <div className="flex justify-center mb-6">
         <FlickerHeading text="G A L L E R Y" className="text-5xl font-bold uppercase w-full text-center" style={{ fontFamily: "var(--font-oswald)", letterSpacing: "1em" }} />
       </div>
-      <div className="mt-48">
+      <div className="mt-48 px-48">
         <PhotoGallery photos={photos} />
       </div>
     </div>
