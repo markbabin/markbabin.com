@@ -15,7 +15,7 @@ export function PostList({ posts, basePath, showRating }: PostListProps) {
   }
 
   return (
-    <ul className="space-y-4">
+    <ul className="space-y-5">
       {posts.map((post) => (
         <li key={post.slug}>
           <Link
@@ -23,7 +23,7 @@ export function PostList({ posts, basePath, showRating }: PostListProps) {
             className="group flex items-baseline justify-between gap-4"
           >
             <span
-              className="text-zinc-900 dark:text-zinc-100 group-hover:text-[#e8855c] dark:group-hover:text-[#e8855c] transition-colors font-bold uppercase tracking-wider"
+              className="text-lg text-zinc-900 dark:text-zinc-100 group-hover:text-[#e8855c] dark:group-hover:text-[#e8855c] transition-colors font-bold uppercase tracking-wider"
               style={{ fontFamily: "var(--font-oswald)" }}
             >
               {post.title}

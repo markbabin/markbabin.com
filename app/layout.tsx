@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Playfair_Display, Oswald, Bitcount_Ink, Source_Code_Pro } from "next/font/google";
 
+import { Analytics } from "@vercel/analytics/react";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import "./globals.css";
@@ -64,6 +65,7 @@ export default function RootLayout({
           <main className="flex-1 py-8">{children}</main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
