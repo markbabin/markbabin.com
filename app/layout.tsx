@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     template: "%s — Mark Babin",
   },
   description: "Articles and photos by Mark Babin.",
+  icons: {
+    icon: "/mbfavicon.png?v=2",
+    apple: "/mbfavicon.png?v=2",
+  },
   alternates: {
     types: {
       "application/rss+xml": "/feed.xml",
