@@ -6,6 +6,11 @@ import Image from "next/image";
 
 const ACCENT = "#e8855c";
 
+function toThumb(src: string): string {
+  const name = src.split("/").pop()!.replace(/\.[^.]+$/, ".webp");
+  return `/photos/thumbs/${name}`;
+}
+
 const PATTERNS: { colSpan: number; rowSpan: number }[] = [
   { colSpan: 2, rowSpan: 2 },
   { colSpan: 1, rowSpan: 1 },
@@ -114,7 +119,7 @@ export function PhotoGallery({ photos }: { photos: string[] }) {
         className="grid gap-2"
         style={{
           gridTemplateColumns: "repeat(4, 1fr)",
-          gridAutoRows: "500px",
+          gridAutoRows: "250px",
           gridAutoFlow: "dense",
         }}
       >
@@ -131,7 +136,7 @@ export function PhotoGallery({ photos }: { photos: string[] }) {
               }}
             >
               <Image
-                src={src}
+                src={toThumb(src)}
                 alt=""
                 fill
                 sizes="(min-width: 640px) 33vw, 50vw"

@@ -1,5 +1,4 @@
-import fs from "fs";
-import path from "path";
+import { getPhotoFiles } from "@/lib/content";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { FlickerHeading } from "@/components/flicker-heading";
 import type { Metadata } from "next";
@@ -7,20 +6,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Photos",
   description: "Photos by Mark Babin.",
+  alternates: { canonical: "/photos" },
 };
 
-function getPhotos(): string[] {
-  const dir = path.join(process.cwd(), "public", "photos");
-  if (!fs.existsSync(dir)) return [];
-
-  return fs
-    .readdirSync(dir)
-    .filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(f))
-    .map((f) => `/photos/${f}`);
-}
-
 export default function PhotosPage() {
-  const photos = getPhotos();
+  const photos = getPhotoFiles();
 
   return (
     <div className="w-screen relative left-1/2 -translate-x-1/2">

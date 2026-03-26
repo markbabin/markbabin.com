@@ -1,5 +1,4 @@
 import { getPhotos, getPost } from "@/lib/content";
-import { Prose } from "@/components/prose";
 import { FlickerHeading } from "@/components/flicker-heading";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -16,7 +15,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPost("photos", slug);
   if (!post) return {};
-  return { title: post.title, description: post.description };
+  return {
+    title: post.title,
+    description: post.description,
+    alternates: { canonical: `/photos/${slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.description,
+      url: `https://babinmark.com/photos/${slug}`,
+      publishedTime: post.date,
+      authors: ["Mark Babin"],
+    },
+  };
 }
 
 export default async function PhotoPostPage({
@@ -43,7 +54,10 @@ export default async function PhotoPostPage({
           {post.rating !== undefined && <span>&middot; {post.rating}/10</span>}
         </div>
       </header>
-      <Prose content={post.content} />
+      <article
+        className="prose prose-zinc dark:prose-invert max-w-none prose-a:text-zinc-900 dark:prose-a:text-zinc-100 prose-a:underline prose-a:underline-offset-2"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </article>
   );
 }

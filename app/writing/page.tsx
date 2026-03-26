@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Writing",
   description: "Articles by Mark Babin.",
+  alternates: { canonical: "/writing" },
 };
 
 export default function Page() {

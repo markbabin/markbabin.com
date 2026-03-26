@@ -40,6 +40,10 @@ yarn-error.log*
 .open-next
 .dev.vars
 
+# generated content
+lib/content-generated.json
+public/photos/thumbs
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

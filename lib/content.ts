@@ -1,6 +1,4 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import data from "./content-generated.json";
 
 export interface Post {
   slug: string;
@@ -8,48 +6,31 @@ export interface Post {
   date: string;
   description: string;
   content: string;
+  html: string;
   rating?: number;
   topic?: string;
 }
 
-const contentDir = path.join(process.cwd(), "content");
-
-function getPosts(section: "writing" | "photos"): Post[] {
-  const dir = path.join(contentDir, section);
-  if (!fs.existsSync(dir)) return [];
-
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
-
-  return files
-    .map((filename) => {
-      const slug = filename.replace(/\.md$/, "");
-      const raw = fs.readFileSync(path.join(dir, filename), "utf-8");
-      const { data, content } = matter(raw);
-      return {
-        slug,
-        title: data.title ?? slug,
-        date: data.date ?? "",
-        description: data.description ?? "",
-        content,
-        ...(data.rating !== undefined ? { rating: data.rating } : {}),
-        ...(data.topic ? { topic: data.topic } : {}),
-      };
-    })
-    .sort((a, b) => (a.date > b.date ? -1 : 1));
-}
+const writing: Post[] = data.writing;
+const photos: Post[] = data.photos;
+const photoFiles: string[] = data.photoFiles;
 
 export function getWritingPosts(): Post[] {
-  return getPosts("writing");
+  return writing;
 }
 
 export function getPhotos(): Post[] {
-  return getPosts("photos");
+  return photos;
 }
 
 export function getPost(
   section: "writing" | "photos",
   slug: string
 ): Post | undefined {
-  const posts = getPosts(section);
+  const posts = section === "writing" ? writing : photos;
   return posts.find((p) => p.slug === slug);
+}
+
+export function getPhotoFiles(): string[] {
+  return photoFiles;
 }

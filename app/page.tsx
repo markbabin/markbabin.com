@@ -1,23 +1,40 @@
-import fs from "fs";
-import path from "path";
+import type { Metadata } from "next";
+import { getPhotoFiles } from "@/lib/content";
 import { NeonTitle } from "@/components/neon-title";
 import { SparkLink } from "@/components/spark-link";
 import { Screensaver } from "@/components/screensaver";
 
-function getPhotos(): string[] {
-  const dir = path.join(process.cwd(), "public", "photos");
-  if (!fs.existsSync(dir)) return [];
-  return fs
-    .readdirSync(dir)
-    .filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(f))
-    .map((f) => `/photos/${f}`);
-}
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
-  const photos = getPhotos();
+  const photos = getPhotoFiles();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Mark Babin",
+    url: "https://babinmark.com",
+    description:
+      "Music producer, game developer, photographer, and writer.",
+    sameAs: [
+      "https://github.com/markbabin",
+      "https://www.instagram.com/belopidiko/",
+      "https://bandcamp.com/trulsone",
+    ],
+  };
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <p className="sr-only">
+        Mark Babin — music producer, game developer, photographer, and
+        occasional writer sharing views on things that matter.
+      </p>
       <div className="fixed bottom-8 right-8">
         <NeonTitle />
       </div>

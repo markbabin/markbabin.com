@@ -37,19 +37,37 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://babinmark.com"),
   title: {
     default: "Mark Babin",
     template: "%s — Mark Babin",
   },
-  description: "Articles and photos by Mark Babin.",
+  description:
+    "Mark Babin — music producer, game developer, photographer, and writer.",
   icons: {
     icon: "/mbfavicon.png?v=2",
     apple: "/mbfavicon.png?v=2",
   },
   alternates: {
+    canonical: "/",
     types: {
       "application/rss+xml": "/feed.xml",
     },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Mark Babin",
+    title: "Mark Babin",
+    description:
+      "Mark Babin — music producer, game developer, photographer, and writer.",
+    url: "https://babinmark.com",
+  },
+  twitter: {
+    card: "summary",
+    title: "Mark Babin",
+    description:
+      "Mark Babin — music producer, game developer, photographer, and writer.",
   },
 };
 
