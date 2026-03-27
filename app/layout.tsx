@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Playfair_Display, Oswald, Bitcount_Ink, Source_Code_Pro } from "next/font/google";
+import { JetBrains_Mono, Playfair_Display, Oswald, Bitcount_Ink, Source_Code_Pro, Jersey_10 } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/react";
 import { Nav } from "@/components/nav";
@@ -36,6 +36,12 @@ const sourceCodePro = Source_Code_Pro({
   weight: ["700"],
 });
 
+const jersey10 = Jersey_10({
+  variable: "--font-jersey-10",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://babinmark.com"),
   title: {
@@ -43,7 +49,7 @@ export const metadata: Metadata = {
     template: "%s — Mark Babin",
   },
   description:
-    "Mark Babin — music producer, game developer, photographer, and writer.",
+    "Mark Babin — makes beats, breaks code, shoots photos, and writes stuff nobody asked for.",
   icons: {
     icon: "/mbfavicon.png?v=2",
     apple: "/mbfavicon.png?v=2",
@@ -60,14 +66,14 @@ export const metadata: Metadata = {
     siteName: "Mark Babin",
     title: "Mark Babin",
     description:
-      "Mark Babin — music producer, game developer, photographer, and writer.",
+      "Mark Babin — makes beats, breaks code, shoots photos, and writes stuff nobody asked for.",
     url: "https://babinmark.com",
   },
   twitter: {
     card: "summary",
     title: "Mark Babin",
     description:
-      "Mark Babin — music producer, game developer, photographer, and writer.",
+      "Mark Babin — makes beats, breaks code, shoots photos, and writes stuff nobody asked for.",
   },
 };
 
@@ -79,7 +85,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`black ${jetbrainsMono.variable} ${playfair.variable} ${oswald.variable} ${bitcountInk.variable} ${sourceCodePro.variable} h-full`}
+      className={`black ${jetbrainsMono.variable} ${playfair.variable} ${oswald.variable} ${bitcountInk.variable} ${sourceCodePro.variable} ${jersey10.variable} h-full`}
     >
       <body className="min-h-full flex flex-col font-sans antialiased">
         <div className="mx-auto w-full max-w-2xl px-6 flex flex-col min-h-full flex-1">

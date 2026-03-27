@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "generate": "npx tsx lib/generate-content.ts",
-    "dev": "npm run generate && next dev",
+    "dev": "npm run generate && next dev --webpack",
     "build": "npm run generate && next build",
     "start": "next start",
     "lint": "eslint",

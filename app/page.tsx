@@ -17,7 +17,7 @@ export default function Home() {
     name: "Mark Babin",
     url: "https://babinmark.com",
     description:
-      "Music producer, game developer, photographer, and writer.",
+      "Makes beats, breaks code, shoots photos, and writes stuff nobody asked for.",
     sameAs: [
       "https://github.com/markbabin",
       "https://www.instagram.com/belopidiko/",
@@ -32,8 +32,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <p className="sr-only">
-        Mark Babin — music producer, game developer, photographer, and
-        occasional writer sharing views on things that matter.
+        Mark Babin — makes beats, breaks code, shoots photos, and writes stuff nobody asked for.
       </p>
       <div className="fixed bottom-8 right-8">
         <NeonTitle />
